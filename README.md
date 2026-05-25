@@ -1,55 +1,90 @@
-🚢 Titanic Data Analysis - Exploratory Data Analysis (EDA) Project
+🚢 Titanic Survival Analysis – EDA Project
+📌 Project Overview
 
-📌 **Project Overview**
-This repository contains a comprehensive Exploratory Data Analysis (EDA) and Statistical Testing framework designed to analyze the factors that influenced passenger survival during the historic Titanic disaster. Using the famous Titanic dataset, this project investigates how socio-economic status, gender, age, and family structures intersected to determine a passenger's fate.
+This project focuses on Exploratory Data Analysis (EDA) of the famous Titanic dataset to understand the factors that influenced passenger survival during the Titanic disaster.
 
-The analytical workflow transitions seamlessly from raw data cleaning and profiling to rigorous multivariate validation, uncovering the underlying human and social patterns of the tragedy.
+The analysis explores how gender, passenger class, age, fare, and family size affected survival chances. The workflow includes data cleaning, feature engineering, visualization, and statistical insights to uncover hidden patterns in the dataset.
 
-🔍 **Key Findings & Hidden Patterns**
-During the deep-dive multivariate exploration, four critical insights were uncovered:
+🔍 Key Findings
+1. Gender had a strong impact on survival
 
-* **The Socio-Economic & Gender Priority:** The Titanic disaster wasn't just a matter of luck; it was a stark reflection of social privilege and chivalry. If you were a **Female** passenger who paid a **High Fare (1st/2nd Class)**, your chances of survival were exceptionally high (above 95%). Conversely, a solo male passenger in 3rd Class had the lowest survival probability.
-* **The "Small Family" Sweet Spot:** Passengers traveling with small families (**1 to 3 members**) achieved the highest survival rates. 
-* **The Large Family Penalty:** As family size grew to 4 or more, the survival rate dropped drastically. This indicates that larger families unfortunately lost crucial time trying to locate each other amidst the chaos on the sinking ship.
-* **The Solitude Disadvantage:** Passengers traveling completely alone (Family Size: 0) faced a remarkably low survival rate (around 30%), highlighting how lack of immediate support affected outcomes during the evacuation.
+Female passengers had significantly higher survival rates compared to males.
 
-🛠️ **Tech Stack & Libraries Used**
-* **Language:** Python 3.x
-* **Data Manipulation:** pandas, numpy
-* **Data Visualization:** matplotlib, seaborn
-* **Statistical Analysis:** scipy.stats (Chi-Square Testing, Data Imputation techniques)
+2. Passenger class influenced survival
 
-📂 **Project Architecture & Methodology**
-### 1. Data Profiling & Cleaning
-* Checked dataset dimensions, structural types, and handled critical missing values (such as Age and Cabin).
-* Addressed data integrity issues to ensure robust statistical comparisons.
+1st class passengers were more likely to survive, while 3rd class passengers had the lowest survival rate.
 
-### 2. Feature Engineering
-* **Family Size:** Combined sibling/spouse (`SibSp`) and parent/child (`Parch`) attributes to calculate the exact family size for each passenger.
-* **IsAlone:** Created a binary feature to isolate the behavioral patterns of solo travelers vs. families.
+3. Fare and survival were related
 
-### 3. Key Analytical Insights
-* **Class vs. Survival:** Statistically validated how the premium placement of 1st class cabins provided faster access to lifeboats.
-* **Gender Dominance:** Analyzed the strict implementation of the "women and children first" protocol across different passenger decks.
+Passengers who paid higher fares generally had better survival chances.
 
-📈 **Visualizations Included**
-The notebook features highly interactive and clean plots following advanced layout styling rules:
-* **Barplots & Countplots:** Displaying the direct correlation between survival rates, Gender, and Passenger Class (`Pclass`).
-* **Distribution & KDE Plots:** Analyzing the age demographics of those who survived versus those who did not.
-* **Heatmaps:** Highlighting correlations between structural numeric features like Fares and survival outcomes.
+4. Family size affected survival
 
-🚀 **How to Run this Project**
-* **Clone the Repository:**
-```bash
-git clone [https://github.com/bishtmamta/Titanic-EDA.git](https://github.com/bishtmamta/Titanic-EDA.git)
-cd Titanic-EDA
-Install Dependencies:
+Passengers traveling with small families had higher survival rates compared to solo travelers or very large families.
 
-Bash
-pip install pandas numpy matplotlib seaborn scipy
-Launch the Notebook:
+5. Children had better survival chances
 
-Bash
-jupyter notebook "titanic EDA project.ipynb"
-🎯 Conclusion
-The analysis mathematically proves that survival on the Titanic was highly systemic. Socio-economic boundaries and institutional guidelines (like class privileges and gender priority) created definitive life-or-death advantages. This project successfully transforms historical raw data into a clear sociological and statistical narrative.
+The analysis suggests that children were given rescue priority during evacuation.
+
+🛠️ Tech Stack & Libraries Used
+Python 3.x
+pandas
+numpy
+matplotlib
+seaborn
+scipy.stats
+📂 Project Workflow
+1. Data Understanding
+Dataset structure analysis
+Data types inspection
+Missing value identification
+2. Data Cleaning
+Handling missing values
+Removing unnecessary columns
+Duplicate checking
+3. Feature Engineering
+
+Created new features such as:
+
+Family Size
+
+Family Size=SibSp+Parch
+
+Is Alone
+
+Is Alone={
+1,
+0,
+	​
+
+Family Size=0
+otherwise
+	​
+
+
+📈 Visualizations Included
+Countplots
+Histograms
+KDE Plots
+Boxplots
+Heatmaps
+
+These visualizations help analyze:
+
+Survival distribution
+Gender impact
+Passenger class trends
+Fare distribution
+Age distribution
+Correlation between numerical features
+📊 Conclusion
+
+The project demonstrates that survival during the Titanic disaster was strongly influenced by:
+
+Gender
+Passenger class
+Fare
+Age
+Family structure
+
+The analysis highlights how social and economic factors played an important role in passenger survival outcomes.
